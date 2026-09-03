@@ -74,7 +74,7 @@ jobs:
       - uses: graalvm/setup-graalvm@v1
         with:
           distribution: graalvm-community
-          java-version: 25
+          java-version: 21
           components: native-image
           github-token: ${{ secrets.GITHUB_TOKEN }}
           cache: gradle

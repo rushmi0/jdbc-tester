@@ -118,7 +118,7 @@ graalvmNative {
 
             javaLauncher.set(
                 javaToolchains.launcherFor {
-                    languageVersion.set(JavaLanguageVersion.of(25))
+                    languageVersion.set(JavaLanguageVersion.of(21))
                     vendor.set(JvmVendorSpec.matching("GraalVM Community"))
                 }
             )
