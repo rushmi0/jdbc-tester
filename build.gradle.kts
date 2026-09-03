@@ -8,7 +8,7 @@ plugins {
     kotlin("kapt") version "2.4.10"
     application
     id("com.gradleup.shadow") version "8.3.6"
-    id("org.graalvm.buildtools.native") version "0.10.6"
+    id("org.graalvm.buildtools.native") version "1.1.9"
 }
 
 group = "win.rushmi0"
