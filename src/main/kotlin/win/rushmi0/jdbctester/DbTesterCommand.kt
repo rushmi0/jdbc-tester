@@ -1,6 +1,5 @@
 package win.rushmi0.jdbctester
 
-import io.getstream.log.StreamLog
 import picocli.CommandLine.Command
 import picocli.CommandLine.Help.Ansi
 import picocli.CommandLine.Option
@@ -62,7 +61,7 @@ class DbTesterCommand : Callable<Int> {
             validationQuery = type.validationQuery,
         )
 
-        StreamLog.getLogger("jdbc-tester").i { "Testing ${type.label} connection to $host:$resolvedPort" }
+        System.err.println("INFO: Testing ${type.label} connection to $host:$resolvedPort")
 
         val result = DatabaseTester(config).run()
         ConsoleReporter(Ansi.AUTO).print(type, jdbcUrl, result)

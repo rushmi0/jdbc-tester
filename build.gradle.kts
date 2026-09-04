@@ -17,18 +17,15 @@ dependencies {
     // CLI parsing — https://picocli.info
     implementation("info.picocli:picocli:4.7.7")
 
-    // Multiplatform logging — https://klibs.io/project/GetStream/stream-log
-    implementation("io.getstream:stream-log:1.3.3")
-
     // JDBC drivers under test
-    implementation("com.oracle.database.jdbc:ojdbc11:23.8.0.25.04")
-    implementation("com.microsoft.sqlserver:mssql-jdbc:12.10.0.jre11")
+    implementation("com.oracle.database.jdbc:ojdbc8:23.8.0.25.04")
+    implementation("com.microsoft.sqlserver:mssql-jdbc:12.10.0.jre8")
 
     testImplementation(kotlin("test"))
 }
 
 kotlin {
-    jvmToolchain(11)
+    jvmToolchain(8)
 }
 
 tasks.processResources {

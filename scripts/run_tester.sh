@@ -8,5 +8,27 @@ if [[ ! -f "$JAR" ]]; then
     exit 1
 fi
 
-exec java -jar "$JAR" -t oracle -H db.example.com -d ORCLPDB -u scott -p tiger
-#exec java -jar "$JAR" -t -t mssql  -H db.example.com -d MyDatabase -u sa -p "S3cret!"
+
+# 3DPASS
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dpassport -p x3dpassport
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dpasstokens -p x3dpasstokens
+
+# 3DDASH
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3ddash -p x3ddash
+
+# 3DSPACE
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dspace -p x3dspace
+
+# 3DSWYM
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dswym_social -p x3dswym_social
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dswym_media -p x3dswym_media
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dswym_widget -p x3dswym_widget
+
+# 3DCOMMENT
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dcomment -p x3dcomment
+
+# 3DNOTICE
+java -jar "$JAR" -t oracle -H db.example.com -d PLATFORM -u x3dnotif -p x3dnotif
+
+# MSSQL example
+#java -jar "$JAR" -t mssql -H db.example.com -d MyDatabase -u sa -p "S3cret!"
